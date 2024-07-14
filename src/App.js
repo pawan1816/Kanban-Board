@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
+import "./App.css"
+import SearchBox from './components/SearchBox'
+import TaskColumn from './components/TaskColumn';
+import TaskForm from './components/TaskForm';
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <SearchBox/>
+      <main className='app_main'>
+        {/* <div className='addTask '>
+            <TaskColumn ColumnName="To Do" ></TaskColumn>
+            <p>Add</p>
+        </div> */}
+        <TaskColumn ColumnName="To Do" ></TaskColumn>
+        <TaskColumn ColumnName="In Progress" className="task_column"/>
+        <TaskColumn ColumnName="Peer Review" className="task_column"/>
+        <TaskColumn ColumnName="Done" className="task_column"/>
+      </main>
+      <TaskForm/>
+
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
+

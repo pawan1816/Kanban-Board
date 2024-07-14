@@ -1,0 +1,30 @@
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dcdcdc;
+}
+.box_form{
+    height: 450px;
+    width: 400px;
+    background: #cfced5;
+}
+.box_form h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.box_form level{
+    font-size: xx-large;
+    font-weight: 500;
+}
+.addtask{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   height: 50px;
+   border-radius: 50%;
+   width: 70px;
+   background: red;
+}
