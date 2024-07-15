@@ -9,22 +9,37 @@
     width: 400px;
     background: #cfced5;
 }
-.box_form h1{
+.box_form h1,.addtask{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
 }
-.box_form level{
-    font-size: xx-large;
-    font-weight: 500;
-}
 .addtask{
+    height: 50px;
+    width: 100%;
+}
+.addtask button{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background: red;
+}
+.formmain{
+   font-size: larger;
+   font-weight: 300;
+}
+.row{
     display: flex;
-    align-items: center;
-    justify-content: center;
-   height: 50px;
-   border-radius: 50%;
-   width: 70px;
-   background: red;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 5px;
+}
+.row textarea{
+  height: 100px;
+  width: 230px;
+}
+.row input{
+    height: 30px;
+    width: 230px;
 }
