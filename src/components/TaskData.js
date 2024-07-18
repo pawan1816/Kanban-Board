@@ -1,10 +1,10 @@
 import React from 'react'
 
 import TaskCard from './TaskCard'
-const TaskData = () => {
+const TaskData = ({columnname,status,description}) => {
   return (
     <div>
-      <TaskCard TaskTitle="Task_Title" TaskDescription="Task_description"/>
+      <TaskCard columnname={columnname} status={status} description={description}/>
     </div>
   )
 }

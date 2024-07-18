@@ -2,13 +2,13 @@ import React from 'react'
 
 import "./TaskCard.css";
 import deleteIcon from '../assists/3405244.png';
-const TaskCard = ({props}) => {
+const TaskCard = ({columnname,status,description,handleDelete,index}) => {
   return (
     <div className='task_card'>
-      <h1>{props.TaskTitle}</h1>
+      <h1>{columnname}</h1>
       <div className='task_card_bottom_line'>
-            <p>{props.TaskDescription}</p>
-            <div className='task_delete'><img src={deleteIcon} className='deleteIcon'/></div>
+            <p>{description}</p>
+            <div class Name='task_delete' onClick={()=>handleDelete(index)}><img src={deleteIcon} className='deleteIcon'/></div>
         </div>
     </div>
     

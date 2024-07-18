@@ -1,16 +1,18 @@
 import React from 'react'
-import TaskData from './TaskData'
+import TaskCard from './TaskCard'
 
-
-const TaskColomn = ({ColumnName,tasks,status}) => {
+const TaskColomn = ({columnname,tasks,status,handleDelete}) => {
   return (
     <section className='task_column'>
-       <h2 className='task_column_heading'>{ColumnName}</h2>
+       <h2 className='task_column_heading'>{columnname}</h2>
        {
-        tasks.map((task,index)=>task.status===status && <TaskData key={index}
-          title={task.task} 
-        />)
-       }
+         tasks.map((task,index)=> task.status===status && 
+           <TaskCard columnname={task.task} status={status} description={task.description}
+            handleDelete={handleDelete}
+            index={index}
+           />
+           
+        )}
        
     </section>
   )

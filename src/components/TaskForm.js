@@ -7,10 +7,10 @@ const TaskForm = ({setTasks}) => {
         task:"",
         status:"todo",
         description:"",
-        tags:[]
+        tags:[],
     })
     const handleChange=(e)=>{
-        const {name,value}=e.target
+        const {name,value}=e.target;
     //    const name=e.target.name;
     //    const value=e.target.value;
 
@@ -23,8 +23,16 @@ const TaskForm = ({setTasks}) => {
     const handleSubmit=(e)=>{
         e.preventDefault();
         setTasks(prev=>{
-            return [...prev,taskData]
-        })
+            return [...prev,taskData];
+        });
+        setTaskData(
+            {
+                task:"",
+                status:"todo",
+                description:"",
+                tags:[],
+            }
+        )
     }
     // const [task,setTask]=useState("");
     // const [status,setStatus]=useState("todo");
@@ -48,14 +56,14 @@ const TaskForm = ({setTasks}) => {
                 <div className='formmain'>
                     <div className='row'>
                         <h1>Title</h1>
-                        <input placeholder='Add Title' type="text" name="task" onChange={handleChange}/>
+                        <input placeholder='Add Title' type="text" name="task" value={taskData.task} onChange={handleChange}/>
                     </div>
                     <div className='row'>
                         <h1>Description</h1>
-                        <textarea placeholder='Add Description' type="text" name="description" onChange={handleChange}/>
+                        <textarea placeholder='Add Description' value={taskData.description} type="text" name="description" onChange={handleChange}/>
                     </div>
                     <div>
-                        <select name="status" className='task_status' onChange={handleChange}> 
+                        <select name="status" value={taskData.status} className='task_status' onChange={handleChange}> 
                             <option value='todo'>To Do</option>
                             <option value='inprogress'>In Progress</option>
                             <option value='peerreview'>Peer Review</option>
